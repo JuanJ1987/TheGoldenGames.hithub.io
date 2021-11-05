@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilo_PaginaN.css"> 
+    <link rel="shortcut icon" href="logo.jpeg">
+    <title> TheGoldenGames.com </title>
+    <header>
+        <div class="titulo">
+            <h1 class="parrafo" id="Nombre"> The Golden Games</h1>
+                <div class="botones">
+                    <div class="boton">
+                    <a href="Index_0.html"> 
+                    Quien soy  </a>
+                </div>
+                <div class="boton">
+                    <a href="Index_1.html"> 
+                    A que me dedico </a>
+                </div>
+                <div class="boton">
+                    <a href="Index_2.html"> 
+                    Productos </a>
+                </div>
+                <div class="boton">
+                    <a href="Index_5.html"> 
+                    Trabajo  </a>
+                </div>
+                <div class="boton">
+                    <a href="Index_6.html"> 
+                    Contacto  </a>
+                </div>
+            </div>
+        </div>
+    <h4 class="parrafo" id="Frase">¡Bringing creativy to live!</h4>
+    <center  class="Portada">
+        <img border="3px" id="logo" src="Encabezado_T.jpeg" alt="header" width="1000" height="300">
+    </center>   
+</header>
+</head>
+<body>
+    <br>
+    <div id="trabajar" class="Introduccion">
+        <h1> ¿Quieres trabajar con nosotros? </h1>
+        <p>
+            Si estas en esta sección es porque estas interesado en entrar a este proyecto
+            y trabajar con nosotros, los interesados en los cargos deberán rellenar el 
+            formulario y en unos días contactaremos con ustedes para hacer público la integración
+            al equipo de "TheGoldenGames".
+        </p>
+
+        <form action="mailto:thegoldenjuan1987@gmail.com" method="POST" enctype="text/plain"
+        title="Formulario Trabajo" border="2px" class="Introduccion">
+            <table class="Introduccion">
+                <tr id="Tabla">
+                    <td id="contenedor">
+                        <label><b> Nombre completo </b> <span> * </span></label><br><br>
+                        <input required type="text" id="nombre" name="Nombre completo"><br>
+                        <br><br>
+                        <div>
+                            <label for="edad"> <b>Edad</b> <span> * </span> </label><br><br>
+                            <input required type="number" id="edad" name="Edad" min="16"><br>
+                            <h7> *Nota edad minima es de 16 años para la consideración del trabajo*</h7>
+                        </div>
+                        <br><br>
+                        <label for="Cargo"> <b> Cargo a solicitar </b> <span> * </span> </label><br><br>
+                        <label><input required type="radio" id="Animador" name="cargo"> Animador </label><br>
+                        <label><input required type="radio" id="Programador" name="cargo"> Programador o desarrollador de videojuegos </label><br>
+                        <label><input required type="radio" id="Administrador" name="cargo"> Administrador </label><br>
+                        <label><input required type="radio" id="Diseñador web" name="cargo"> Diseñador web </label><br>
+                        <label><input required type="radio" id="Diseñador grafico" name="cargo"> Diseñador grafico </label><br>
+                        <br><br>
+                    </td>
+                    <td id="contenedor">
+                        <label for="genero"> <b> Genero </b></label><br><br>
+                        <label><input type="radio" id="hombre" name="genero"> Hombre </label><br>
+                        <label><input type="radio" id="mujer" name="genero"> Mujer </label><br>
+                        <br><br>
+                        <label for="tel"> <b> numero telefonico </b> <span> * </span> </label><br>
+                        <input required type="tel" id="tel" name="tel"><br>
+                        <br><br>
+                    <label for="correo"> <b> Gmail</b> <span> * </span> </label> <br><br>
+                    <input required type="email" id="correo" name="correo"><br>
+                    <br><br>
+                        <label for="Nivel"> <b> Del 1-10 nivel de ingles </b> <span> * </span> </label> <br><br> 
+                        <input required type="range" name="price" id="price" min="10" max="100" step="10" value="50">
+                        <output class="price-output" for="price"></output>
+                        <script>
+                            const Nivel = document.querySelector('#price')
+                            const output = document.querySelector('.price-output')
+
+                            output.textContent = price.value
+
+                                price.addEventListener('input', function() {
+                            output.textContent = price.value
+                        });
+                        </script>
+                        <br><br>
+                        </td>
+                        <td id="contenedor">
+                        <label for="Experiencia"> <b> Experiencia laboral </b> <span> * </span> </label><br><br>
+                        <label><input required type="radio" id="cb1" name="Experiencia"> Nivel Alto de Experiencia laboral </label><br>
+                        <label><input required type="radio" id="cb2" name="Experiencia"> Nivel medio de Experiencia laboral </label><br>
+                        <label><input required type="radio" id="cb3" name="Experiencia"> Nivel Bajo de Experiencia laboral </label><br>
+                        <br><br>
+                        <label  for="Hoja de vida"> <b> Ingresar aqui el archivo de tu hoja de vida </b></label><br><br>
+                        <input required type="file"> <br>
+                        <br><br>
+                        <label for="Condiciones"> <b> Declaro haber leido y aceptar las 
+                        condiciones de generales <br> y la normativa de proteccion de datos <br> <span> * </span> <br><br>
+                        <a href="Terminos y condiciones TGG.docx"> (Condiciones de servicio)</a></b> </label><br>
+                        <label><input required type="radio" id="SI" name="r2"> Si </label><br>
+                        <label><input required type="radio" id="NO" name="r2"> No </label><br>
+                    
+                    <p><button type="reset">Reset</button></p>
+                    <input type ="submit" value="Enviar Formulario"
+                    onclick="alert('Sus datos han sido enviados, mire su correo para mas informacion')">  
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</body>
+<footer border>
+    <div id="footer" border="3px">
+        <div id="Icono" class="Footer">
+            <img id= "Icon"src="C:\Users\JuanJ\codificacion\Encabezado.jpeg" alt="Icon">
+            <p id="Siglas"> TGG </p>
+        </div>
+        <div class="Footer">
+            <div> 
+                <h3> Soporte </h3>   
+                <a href="Index_6.html"> Contacto</a>
+                <a href="Terminos y condiciones TGG.docx"> Terminos y Condiciones </a>
+            </div>
+        </div>
+        <table id="Copyright" class="Footer">
+            <div>
+                <tr>
+                    <td>
+                        <img src="https://th.bing.com/th/id/R.5fef38834396ab004da2cb4174bc3c96?rik=tmoz7wEYkVulhg&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f2017%2f05%2fCopyright-Symbol-PNG-File.png&ehk=Y1fozvtN7oroubUBfxosp7elGmV6KRmxmCl7vinlq%2fc%3d&risl=&pid=ImgRaw&r=0" alt="Copyrigth"
+                        width="80" height="80" >
+                        <p> @TheGoldenGames <br>
+                            Derechos reservados </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="Cuentas">
+                        <a href="mailto:thegoldenjuan1987@gmail.com" onclick=null;return false;><img
+                        src="https://www.shareicon.net/data/512x512/2016/07/02/635318_gmail_512x512.png" alt="Gmail"
+                        width="40" height="40"
+                        onmouseover="this.src='https://icones.pro/wp-content/uploads/2021/03/icone-gmail-logo-png-grise.png'"
+                            onmouseout="this.src='https://www.shareicon.net/data/512x512/2016/07/02/635318_gmail_512x512.png'"> </a>
+                        <a href="https://www.facebook.com/juanjose.duranrincon.5" onclick=null;return false;><img 
+                        src="https://image.flaticon.com/icons/png/512/25/25305.png" alt="Facebook"
+                        width="40" height="40"
+                         onmouseover="this.src='https://th.bing.com/th/id/R.ca98c5e0dee02f54c1a4a917efde2f6b?rik=hATyj6KLJqQyKQ&riu=http%3a%2f%2fkatrinamatthewsphotography.co.uk%2fwp-content%2fuploads%2f2017%2f04%2fsocial-1_logo-facebook.png&ehk=NLqv38E38oT8knmX0RcNUZoIM83WggDYGJsvdxF%2bX6c%3d&risl=&pid=ImgRaw&r=0'"
+                            onmouseout="this.src='https://image.flaticon.com/icons/png/512/25/25305.png'"> </a>
+                        <a href="tel:3152353383"><img 
+                        src="https://www.scmobiliario.com/wp-content/uploads/2017/05/Icono-Telefono.png" alt="tel"
+                            width="40" height="40"
+                             onmouseover="this.src='https://cdn.pixabay.com/photo/2018/03/19/02/52/logo-whatsapp-3238900_1280.png'"
+                            onmouseout="this.src='https://www.scmobiliario.com/wp-content/uploads/2017/05/Icono-Telefono.png'"> </a>
+                        <a href="https://twitter.com/thefredbear1983?s=09"><img 
+                        src="https://image.flaticon.com/icons/png/512/54/54300.png" alt="Twitter"
+                            width="40" height="40"
+                                onmouseover="this.src='https://th.bing.com/th/id/R.d24fb536c37ae74a3500072c61e978f9?rik=tpCoSR45LlXjrg&riu=http%3a%2f%2faepeabilbao2018.com%2fimages%2ftwitter_gris.png&ehk=I224NIbsjznv5uWMwaxmEaAJjsDnk%2beiUWB%2b74nBiLY%3d&risl=&pid=ImgRaw&r=0'"
+                            onmouseout="this.src='https://image.flaticon.com/icons/png/512/54/54300.png'"> </a>
+                        <a href="https://wa.link/bbkmvc"><img 
+                        src="https://www.freepngimg.com/thumb/whatsapp/63120-logo-whatsapp-computer-icons-free-download-png-hd.png" alt="Whatsapp"
+                            width="40" height="40"
+                                onmouseover="this.src='https://th.bing.com/th/id/R.fcda8dfae1b02a8e4391024459765cfb?rik=oHiETrcKZWrRCA&pid=ImgRaw&r=0'"
+                            onmouseout="this.src='https://www.freepngimg.com/thumb/whatsapp/63120-logo-whatsapp-computer-icons-free-download-png-hd.png'"> </a>
+                        <a href="https://msng.link/o/?@TheGoldenGames=tg"><img 
+                        src="https://image.flaticon.com/icons/png/512/152/152827.png" alt="Telegram"
+                            width="40" height="40"
+                                onmouseover="this.src='https://icones.pro/wp-content/uploads/2021/04/icone-telegramme-symbole-logo-gris.png'"
+                            onmouseout="this.src='https://image.flaticon.com/icons/png/512/152/152827.png'"> </a>
+                        <a href="https://www.instagram.com/TheGoldenGames.F/"><img 
+                        src="https://changingfaceiff.org/wp-content/uploads/2017/11/1600-e1510625779498.png" alt="Instagram"
+                            width="40" height="40"
+                                onmouseover="this.src='https://images.vexels.com/media/users/3/131142/isolated/preview/42686c238da2892da4bdea221bada9a6-icono-plano-de-instagram-by-vexels.png'"
+                            onmouseout="this.src='https://changingfaceiff.org/wp-content/uploads/2017/11/1600-e1510625779498.png'"> </a>
+                        <a href="https://www.youtube.com/channel/UCQvSxrsd6KXVpFe03EMEJdg"><img 
+                        src="https://image.flaticon.com/icons/png/512/9/9996.png" alt="Youtube"
+                            width="40" height="40"
+                            onmouseover="this.src='https://www.texasbankandtrust.com/assets/content/rzzF01yh/2016/12/11/YOUTUBE-256.png'"
+                            onmouseout="this.src='https://image.flaticon.com/icons/png/512/9/9996.png'"> </a>
+                        <a href="https://gamejolt.com/@TheGoldenGames"><img 
+                            src="https://img.informer.com/icons/png/128/6412/6412360.png" alt=" Gamejolf"
+                                width="40" height="40"
+                                onmouseover="this.src='https://ualinux.com/images/ualinux/pack/gamepack/gamejolt.png'"
+                                onmouseout="this.src='https://img.informer.com/icons/png/128/6412/6412360.png'"> </a>
+                    </td>
+                </tr>
+            </div>
+        </table>
+    </div>      
+</footer>
+</html>
